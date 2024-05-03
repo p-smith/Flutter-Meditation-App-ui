@@ -36,7 +36,7 @@ class DetailsScreen extends StatelessWidget {
                       "Meditation",
                       style: Theme.of(context)
                           .textTheme
-                          .display1
+                          .headlineMedium!
                           .copyWith(fontWeight: FontWeight.w900),
                     ),
                     SizedBox(height: 10),
@@ -91,7 +91,7 @@ class DetailsScreen extends StatelessWidget {
                       "Meditation",
                       style: Theme.of(context)
                           .textTheme
-                          .title
+                          .titleLarge!
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
                     Container(
@@ -123,7 +123,7 @@ class DetailsScreen extends StatelessWidget {
                               children: <Widget>[
                                 Text(
                                   "Basic 2",
-                                  style: Theme.of(context).textTheme.subtitle,
+                                  style: Theme.of(context).textTheme.titleSmall,
                                 ),
                                 Text("Start your deepen you practice")
                               ],
@@ -150,10 +150,10 @@ class DetailsScreen extends StatelessWidget {
 class SeassionCard extends StatelessWidget {
   final int seassionNum;
   final bool isDone;
-  final Function press;
+  final void Function()? press;
   const SeassionCard({
-    Key key,
-    this.seassionNum,
+    Key? key,
+    required this.seassionNum,
     this.isDone = false,
     this.press,
   }) : super(key: key);
@@ -203,7 +203,7 @@ class SeassionCard extends StatelessWidget {
                     SizedBox(width: 10),
                     Text(
                       "Session $seassionNum",
-                      style: Theme.of(context).textTheme.subtitle,
+                      style: Theme.of(context).textTheme.titleSmall,
                     )
                   ],
                 ),

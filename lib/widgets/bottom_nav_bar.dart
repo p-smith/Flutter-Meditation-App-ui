@@ -4,7 +4,7 @@ import 'package:meditation_app/constants.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -38,12 +38,12 @@ class BottomNavBar extends StatelessWidget {
 class BottomNavItem extends StatelessWidget {
   final String svgScr;
   final String title;
-  final Function press;
+  final void Function()? press;
   final bool isActive;
   const BottomNavItem({
-    Key key,
-    this.svgScr,
-    this.title,
+    Key? key,
+    required this.svgScr,
+    required this.title,
     this.press,
     this.isActive = false,
   }) : super(key: key);

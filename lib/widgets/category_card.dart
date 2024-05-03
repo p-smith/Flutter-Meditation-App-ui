@@ -5,11 +5,11 @@ import 'package:meditation_app/constants.dart';
 class CategoryCard extends StatelessWidget {
   final String svgSrc;
   final String title;
-  final Function press;
+  final void Function()? press;
   const CategoryCard({
-    Key key,
-    this.svgSrc,
-    this.title,
+    Key? key,
+    required this.svgSrc,
+    required this.title,
     this.press,
   }) : super(key: key);
 
@@ -47,7 +47,7 @@ class CategoryCard extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
-                        .title
+                        .titleLarge!
                         .copyWith(fontSize: 15),
                   )
                 ],

@@ -68,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                     "Good Mornign \nShishir",
                     style: Theme.of(context)
                         .textTheme
-                        .display1
+                        .headlineMedium!
                         .copyWith(fontWeight: FontWeight.w900),
                   ),
                   SearchBar(),
