@@ -4,16 +4,16 @@ import 'package:meditation_app/constants.dart';
 
 class BottomNavBar extends StatelessWidget {
   const BottomNavBar({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
       height: 80,
       color: Colors.white,
-      child: Row(
+      child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           BottomNavItem(
@@ -41,12 +41,12 @@ class BottomNavItem extends StatelessWidget {
   final void Function()? press;
   final bool isActive;
   const BottomNavItem({
-    Key? key,
+    super.key,
     required this.svgScr,
     required this.title,
     this.press,
     this.isActive = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

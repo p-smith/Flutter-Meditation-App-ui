@@ -7,11 +7,11 @@ class CategoryCard extends StatelessWidget {
   final String title;
   final void Function()? press;
   const CategoryCard({
-    Key? key,
+    super.key,
     required this.svgSrc,
     required this.title,
     this.press,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,7 @@ class CategoryCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(13),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
               offset: Offset(0, 17),
               blurRadius: 17,
@@ -39,9 +39,9 @@ class CategoryCard extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: <Widget>[
-                  Spacer(),
+                  const Spacer(),
                   SvgPicture.asset(svgSrc),
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     title,
                     textAlign: TextAlign.center,
